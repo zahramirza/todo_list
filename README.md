@@ -37,7 +37,11 @@ On your computer, open a Terminal/cmd-window and navigate to the directory that 
 > After starting the Terminal/cmd-window, you already are in your home directory.
 > On Windows, this is `C:\Users\[Username]\`, on macOS it's `/Users/[Username]`, and on Linux, it is `/home/[Username]`. If you are doing this for the first time, use the command `mkdir devel` to create the development directory. Then use `cd devel` to change to this directory. When you start the Terminal window next time, you will only need the `cd` command. I will simply use the term *command line* to refer to the Terminal/Cmd window from now on.
 
-Enter the command `git clone` on the command line to clone your fork of the main repository to your computer.
+Enter the command
+
+```git clone https://github.com/martingasser/todo_list``` 
+
+on the command line to clone your fork of the main repository to your computer.
 
 ### 3. Create a Vue project inside the cloned directory
 
