@@ -25,7 +25,7 @@ git config --global init.defaultBranch main
 
 In class on we have seen how to create a *fork* on Github (you can also follow these [instructions](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo)).
 
-After successfully forking the repository https://github.com/martingasser/todo_list, you should see an exact copy of it in your Github profile.
+After successfully forking this repository (https://github.com/martingasser/todo_list), you should see an exact copy of it in your Github profile.
 
 ### 2. Clone the fork on your local computer
 
