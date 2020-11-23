@@ -41,7 +41,7 @@ Enter the command
 
 ```git clone https://github.com/[yourusername]/todo_list``` 
 
-on the command line to clone your fork of the main repository to your computer. Replace the `[yourusername]` with your actual username in the command above.
+on the command line to clone your fork of the main repository to your computer. Replace `[yourusername]` with your actual username in the command above.
 
 ### 3. Create a Vue project inside the cloned directory
 
