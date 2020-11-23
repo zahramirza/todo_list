@@ -14,6 +14,8 @@ You can work on the assignment in groups, however, each participant should submi
 
 Github has recently stopped using the name `master` for the default branch for reasons of language inclusivity; instead, they are using the name `main` now. We will follow this convention and update our local git installation.
 
+Open a Terminal/cmd window and enter this command:
+
 ```
 git config --global init.defaultBranch main
 ```
