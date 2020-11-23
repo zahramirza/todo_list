@@ -39,7 +39,7 @@ On your computer, open a Terminal/cmd-window and navigate to the directory that 
 
 Enter the command
 
-```git clone https://github.com/martingasser/todo_list``` 
+```git clone https://github.com/[yourusername]/todo_list``` 
 
 on the command line to clone your fork of the main repository to your computer.
 
