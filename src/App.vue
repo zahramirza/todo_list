@@ -9,18 +9,22 @@
         class="todo-text"
         placeholder="New todo"
       />
+      <datepicker v-on:update="dateUpdated"/>
       <button class="todo-add-button" v-on:click="addTodo()">Add</button>
     </div>
     
     <ul v-if="todos.length">
       <li class="todo">
         <span class="todo-text list-header">Todo</span>
+        <span class="todo-date list-header">Due date</span>
         <span class="todo-empty-button list-header"></span>
       </li>
 
       <li class="todo" v-for="todo in todos" :key="todo.id">
-        <span class="todo-text">{{ todo.text }}</span>
-        <button class="todo-remove-button" v-on:click="removeTodo(todo)">Remove</button>
+        <!-- <span class="todo-text">{{ todo.text }}</span>
+        <span class="todo-date">{{ todo.date.format('MM-DD-YYYY') }}</span>
+        <button class="todo-remove-button" v-on:click="removeTodo(todo)">Remove</button> -->
+        <todo :todo="todo" v-on:remove="removeTodo(todo)"/>
       </li>
     </ul>
     <p class="none" v-else>Add a new todo in the input above</p>
@@ -28,13 +32,19 @@
 </template>
 
 <script>
+import datepicker from './components/datepicker.vue'
+import todo from './components/todo.vue'
+
 export default {
   name: "App",
   components: {
+    datepicker,
+    todo
   },
   data() {
     return {
       newTodoText: "",
+      newTodoDate: "",
       todos: [],
     };
   },
@@ -44,15 +54,23 @@ export default {
 
         this.todos.push({
           text: this.newTodoText,
+          date: this.newTodoDate,
           id: Date.now(),
           done: false
         });
 
+        this.todos.sort((todoA, todoB) => -todoA.date.diff(todoB.date))
+
         this.newTodoText = "";
       }
     },
+    
     removeTodo (item) {
       this.todos = this.todos.filter((_item) => _item !== item);
+    },
+
+    dateUpdated (date) {
+      this.newTodoDate = date.clone()
     }
   },
 };
