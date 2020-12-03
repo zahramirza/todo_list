@@ -21,9 +21,6 @@
       </li>
 
       <li class="todo" v-for="todo in todos" :key="todo.id">
-        <!-- <span class="todo-text">{{ todo.text }}</span>
-        <span class="todo-date">{{ todo.date.format('MM-DD-YYYY') }}</span>
-        <button class="todo-remove-button" v-on:click="removeTodo(todo)">Remove</button> -->
         <todo :todo="todo" v-on:remove="removeTodo(todo)"/>
       </li>
     </ul>
